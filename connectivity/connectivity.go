@@ -64,8 +64,8 @@ const (
 
 // Reporter reports the connectivity states.
 type Reporter interface {
-	// CurrentState returns the current state of the reporter.
-	CurrentState() State
+	// GetState returns the current state of the reporter.
+	GetState() State
 	// WaitForStateChange blocks until the reporter's state is different from the given state,
 	// and returns true.
 	// It returns false if <-ctx.Done() can proceed (ctx got timeout or got canceled).
